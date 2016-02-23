@@ -47,12 +47,30 @@ div {
   <div class="converter">
     <form id="form">
       Input Character: <input type="text" name="characters">
-      <input type="submit" value="Translate" onclick="prompt('Hello, welcome to Chinese English flashcard translator! Play with these words to create your own sentence.')"><br>
+      <input type="submit" value="Click to begin" onclick="alert('Hello, welcome to Chinese English flashcard translator! Once you go through the flashcards, refresh the page to see if the randomly generated sentence below makes sense!')"><br>
 
     </form>
 
+    <script type="text/javascript">
+    <!--
 
-<br><br><br><br><br><br><br><br>
+    subject = new Array("你", "我");
+    noun = new Array("名字", "饭");
+    verb = new Array("吃", "喜欢");
+    modifier = new Array("好", "早", "什么");
+    preposition = new Array("上", "那个", "这个");
+
+    var rand1 = [Math.floor ( Math.random() * subject.length )];
+    var rand2 = [Math.floor ( Math.random() * noun.length )];
+    var rand3 = [Math.floor ( Math.random() * verb.length )];
+    var rand4 = [Math.floor ( Math.random() * modifier.length )];
+    var rand5 = [Math.floor ( Math.random() * preposition.length )];
+
+    document.write(subject[rand2] + modifier[rand4] + " " + preposition[rand3] + " " + verb[rand2] + " " + noun[rand1] + " " + ".");
+
+    </script>
+
+<br><br><br><br><br>
 <div>
   <span id ="test0">Chinese Character</span>: <input type="text" id="myText" value="你好">
   <br><p>Click the button to translate into English.</p>
@@ -162,6 +180,9 @@ div {
 </div>
 
   <script>
+  function generateSentence() {
+
+  }
   function myFunction() {
       document.getElementById("myText").value = "Hello";
       document.getElementById("test0").innerText ="English Version";
@@ -260,6 +281,14 @@ function myFunction11a() {
     document.getElementById("test11").innerText ="Chinese Character";
 }
   </script>
+<div>Did you have a good experience using these flashcards?<div>
+  <form action="action_page.php">
+  <input type="radio" name="satisfaction" value="Yes" checked>对(dui4)   Yes<br>
+  <input type="radio" name="satisfaction" value="Yes" checked>对, but more words please<br>
+  <input type="radio" name="satisfaction" value="No"> 不(bu4) / No，Needs something changed or more features<br>
+  <input type="radio" name="satisfaction" value="No"> 不, The topic doesn't interest me <br><br>
+  <input type="submit" value="Submit" onclick="alert('Thank you, your response has been recorded!')"
+  </form>
 
 </body>
 </html>
