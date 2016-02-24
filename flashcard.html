@@ -74,8 +74,11 @@ div {
 <div>
   <span id ="test0">Chinese Character</span>: <input type="text" id="myText" value="你好">
   <br><p>Click the button to translate into English.</p>
-  <button onclick="myFunction()">Translate</button><br><br>
+  <button onclick="myFunction()">Translate</button>
   <button onclick="myFunctiona()">Refresh</button><br><br>
+  document.getElementById("myFunction()").display = "none";
+  document.getElementById("myFunctiona()").display = "block";
+
 
   <audio controls="controls">
     <source src="niaudio.mp3" type="audio/mpeg">
@@ -87,12 +90,12 @@ div {
 
   <span id ="test1">Pinyin</span>: <input type="text" id="myText1" value="你好">
   <p>Click the button to translate into pinyin.</p>
-  <button onclick="myFunction1()">Translate</button><br><br>
-  <button onclick="myFunction1a()">Refresh</button><br><br><br><br><br><br>
+  <button onclick="myFunction1()">Translate</button>
+  <button onclick="myFunction1a()">Refresh</button><br><br><br><br>
 
   <span id ="test2">Chinese Character</span>: <input type="text" id="myText2" value="早上好">
   <p>Click the button to translate into English.</p>
-  <button onclick="myFunction2()">Translate</button><br><br>
+  <button onclick="myFunction2()">Translate</button>
   <button onclick="myFunction2a()">Refresh</button><br><br>
 
   <audio controls="controls">
@@ -107,12 +110,12 @@ div {
 
   <span id ="test3">Pinyin</span>: <input type="text" id="myText3" value="早上好">
   <p>Click the button to translate into pinyin.</p>
-  <button onclick="myFunction3()">Translate</button><br><br>
-  <button onclick="myFunction3a()">Refresh</button><br><br><br><br><br><br>
+  <button onclick="myFunction3()">Translate</button>
+  <button onclick="myFunction3a()">Refresh</button><br><br><br><br>
 
   <span id ="test4">Chinese Character</span>: <input type="text" id="myText4" value="早饭">
   <p>Click the button to translate into English.</p>
-  <button onclick="myFunction4()">Translate</button><br><br>
+  <button onclick="myFunction4()">Translate</button>
   <button onclick="myFunction4a()">Refresh</button><br><br>
 
   <audio controls="controls">
@@ -124,12 +127,12 @@ div {
 
   <span id ="test5">Pinyin</span>: <input type="text" id="myText5" value="早饭">
   <p>Click the button to translate into pinyin.</p>
-  <button onclick="myFunction5()">Translate</button><br><br>
-  <button onclick="myFunction5a()">Refresh</button><br><br><br><br><br><br>
+  <button onclick="myFunction5()">Translate</button>
+  <button onclick="myFunction5a()">Refresh</button><br><br><br><br>
 
   <span id ="test6">Chinese Character</span>: <input type="text6" id="myText6" value="喜欢">
   <p>Click the button to translate into English.</p>
-  <button onclick="myFunction6()">Translate</button><br><br>
+  <button onclick="myFunction6()">Translate</button>
   <button onclick="myFunction6a()">Refresh</button><br><br>
 
   <audio controls="controls">
@@ -141,12 +144,12 @@ div {
 
   <span id ="test7">Pinyin</span>: <input type="text" id="myText7" value="喜欢">
   <p>Click the button to translate into pinyin.</p>
-  <button onclick="myFunction7()">Translate</button><br><br>
-  <button onclick="myFunction7a()">Refresh</button><br><br><br><br><br><br>
+  <button onclick="myFunction7()">Translate</button>
+  <button onclick="myFunction7a()">Refresh</button><br><br><br><br>
 
   <span id ="test8">Chinese Character</span>: <input type="text" id="myText8" value="名字">
   <p>Click the button to translate into English.</p>
-  <button onclick="myFunction8()">Translate</button><br><br>
+  <button onclick="myFunction8()">Translate</button>
   <button onclick="myFunction8a()">Refresh</button><br><br>
 
   <audio controls="controls">
@@ -158,12 +161,12 @@ div {
 
   <span id ="test9">Pinyin</span>: <input type="text" id="myText9" value="名字">
   <p>Click the button to translate into pinyin.</p>
-  <button onclick="myFunction9()">Translate</button><br><br>
-  <button onclick="myFunction9a()">Refresh</button><br><br><br><br><br><br>
+  <button onclick="myFunction9()">Translate</button>
+  <button onclick="myFunction9a()">Refresh</button><br><br><br><br>
 
   <span id ="test10">Chinese Character</span>: <input type="text" id="myText10" value="什么">
   <p>Click the button to translate into English.</p>
-  <button onclick="myFunction10()">Translate</button><br><br>
+  <button onclick="myFunction10()">Translate</button>
   <button onclick="myFunction10a()">Refresh</button><br><br>
 
   <audio controls="controls">
@@ -175,18 +178,17 @@ div {
 
   <span id ="test11">Pinyin</span>: <input type="text" id="myText11" value="什么">
   <p>Click the button to translate into pinyin.</p>
-  <button onclick="myFunction11()">Translate</button><br><br>
-  <button onclick="myFunction11a()">Refresh</button><br><br><br><br><br><br>
+  <button onclick="myFunction11()">Translate</button>
+  <button onclick="myFunction11a()">Refresh</button><br><br><br><br>
 </div>
 
   <script>
-  function generateSentence() {
 
-  }
   function myFunction() {
       document.getElementById("myText").value = "Hello";
       document.getElementById("test0").innerText ="English Version";
   }
+
   function myFunctiona() {
       document.getElementById("myText").value = "你好";
       document.getElementById("test0").innerText ="Chinese Character";
@@ -281,10 +283,12 @@ function myFunction11a() {
     document.getElementById("test11").innerText ="Chinese Character";
 }
   </script>
+
 <div>Did you have a good experience using these flashcards?<div>
   <form action="action_page.php">
-  <input type="radio" name="satisfaction" value="Yes" checked>对(dui4)   Yes<br>
+  <input type="radio" name="satisfaction" value="Yes" checked>对，很酷(dui4，hen3ku4)👌<br>
   <input type="radio" name="satisfaction" value="Yes" checked>对, but more words please<br>
+  <input type="radio" name="satisfaction" value="Yes" checked>对, but the layout is 不好👎<br>
   <input type="radio" name="satisfaction" value="No"> 不(bu4) / No，Needs something changed or more features<br>
   <input type="radio" name="satisfaction" value="No"> 不, The topic doesn't interest me <br><br>
   <input type="submit" value="Submit" onclick="alert('Thank you, your response has been recorded!')"
